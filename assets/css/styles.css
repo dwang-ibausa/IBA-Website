@@ -610,3 +610,16 @@ a.logo-card:hover .logo-card__name { color: var(--teal-600); }
   margin-top: .8rem; font-size: .84rem; color: var(--muted); text-align: center;
 }
 .split--single { grid-template-columns: 1fr; }
+
+/* ---------- Registration card ---------- */
+.register {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem;
+  margin: 1.8rem 0 0; padding: 1.3rem 1.5rem;
+  background: var(--canvas); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.register__qr {
+  width: 150px; height: 150px; flex: none;
+  border: 1px solid var(--line); border-radius: var(--radius-s); background: #fff;
+}
+.register__body { display: flex; flex-direction: column; align-items: flex-start; gap: .7rem; }
+.register__note { margin: 0; font-size: .9rem; color: var(--muted); }

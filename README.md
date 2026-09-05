@@ -26,7 +26,7 @@ Ctrl+F5 on Windows) before assuming the upload failed.
 | `event-bbq-2026.html` | Detail page: 2026 BBQ & Music Festival |
 | `assets/css/styles.css` | All styling. Design tokens are at the top |
 | `assets/js/main.js` | Navigation, language toggle, event sorting, image fallbacks, lightbox |
-| `assets/img/` | Conference flyer, and sponsor logos in `sponsors/` |
+| `assets/img/` | Conference flyer, registration QR, and sponsor logos in `sponsors/` |
 | `ASSETS.md` | Where every image comes from, and which ones are still hosted elsewhere |
 | `download-assets.sh` | One-off script to pull the remaining remote images into the repo |
 
@@ -139,11 +139,11 @@ Colours, spacing and shadows are CSS custom properties in `:root` at the top of
 
 ## Known gaps
 
-- **Conference registration is an email link.** The invitation and the flyer both
-  say to register at www.iba-usa.org, which is this site, so there is nothing to
-  point at yet. When a registration form or ticketing page exists, replace the
-  `mailto:` links on `event-conference-2026.html`. The flyer's QR code resolves to
-  the site's front page for the same reason.
+- **Conference registration** runs on Zeffy. Both the button and the QR code on
+  `event-conference-2026.html` point at
+  `https://www.zeffy.com/en-US/ticketing/2026-iba-annual-conference`. The QR image
+  (`assets/img/register-qr.png`) was cropped from the flyer, so if the flyer's code
+  ever changes, re-crop it rather than leaving the two out of step.
 - **One sponsor tile has no WeChat QR code.** If a clean copy is supplied, save it
   as `assets/img/sponsors/yingxin-xue-wechat.png` and the card will display it
   automatically at 96px. No code change is needed.

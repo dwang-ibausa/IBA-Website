@@ -8,6 +8,7 @@ Two kinds of image are used on this site, and they behave differently.
 |---|---|
 | `assets/img/iba-2026-conference-flyer.jpg` | Annual Conference page, beside the description |
 | `assets/img/iba-2026-conference-flyer.pdf` | Opens when the flyer image is clicked |
+| `assets/img/register-qr.png` | Registration QR on the Annual Conference page, cropped from the flyer |
 | `assets/img/sponsors/*.png` | Sponsorship page, one per organization |
 
 The sponsor logos are trimmed of their surrounding whitespace and scaled to 200px
