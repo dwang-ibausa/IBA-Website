@@ -27,6 +27,8 @@ Ctrl+F5 on Windows) before assuming the upload failed.
 | `assets/css/styles.css` | All styling. Design tokens are at the top |
 | `assets/js/main.js` | Navigation, language toggle, event sorting, image fallbacks, lightbox |
 | `assets/img/` | Conference flyer, and sponsor logos in `sponsors/` |
+| `ASSETS.md` | Where every image comes from, and which ones are still hosted elsewhere |
+| `download-assets.sh` | One-off script to pull the remaining remote images into the repo |
 
 There is **no templating**. The header and footer are copied into all seven pages,
 so a change to the navigation or the footer has to be made in all seven. This is
@@ -145,7 +147,9 @@ Colours, spacing and shadows are CSS custom properties in `:root` at the top of
 - **One sponsor tile has no WeChat QR code.** If a clean copy is supplied, save it
   as `assets/img/sponsors/yingxin-xue-wechat.png` and the card will display it
   automatically at 96px. No code change is needed.
-- **Two contact addresses are in use**, `admin@iba-usa.org` and
-  `admin@iba-usa.com`. Both appear in the footer. Worth consolidating.
+- **Several images are still served from the old Squarespace account**, including
+  the logo, the leadership portraits and the symposium program. They work, but they
+  depend on an account this site does not control. `ASSETS.md` explains how to bring
+  them in-house.
 - **The symposium program is 25 images**, not text, so its content is not
   searchable and not readable by a screen reader.
