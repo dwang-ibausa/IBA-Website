@@ -414,10 +414,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .lightbox {
   position: fixed; inset: 0; z-index: 300;
   display: none; place-items: center;
-  background: rgba(6, 26, 51, .92); padding: 2rem 1rem;
+  background: rgba(6, 26, 51, .92); padding: 1.4rem 1rem;
 }
 .lightbox.is-open { display: grid; }
-.lightbox img { max-width: min(1100px, 94vw); max-height: 82vh; border-radius: var(--radius-s); }
+.lightbox img { max-width: min(1100px, 94vw); max-height: 88vh; border-radius: var(--radius-s); }
 .lightbox__bar {
   position: absolute; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
   display: flex; align-items: center; gap: 1rem; color: rgba(255,255,255,.85); font-size: .9rem;
@@ -623,3 +623,46 @@ a.logo-card:hover .logo-card__name { color: var(--teal-600); }
 }
 .register__body { display: flex; flex-direction: column; align-items: flex-start; gap: .7rem; }
 .register__note { margin: 0; font-size: .9rem; color: var(--muted); }
+
+/* ---------- Rate tables ---------- */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.rates {
+  width: 100%; border-collapse: collapse; background: #fff;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; font-size: .96rem; min-width: 460px;
+}
+.rates th, .rates td {
+  padding: .85rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.rates thead th {
+  background: var(--canvas); color: var(--ink); font-weight: 700;
+  font-size: .82rem; letter-spacing: .06em; text-transform: uppercase;
+}
+.rates thead th small {
+  display: block; margin-top: .2rem; font-weight: 400; font-size: .78rem;
+  letter-spacing: .02em; text-transform: none; color: var(--muted);
+}
+.rates tbody th { font-weight: 600; color: var(--ink); }
+.rates tbody td { font-variant-numeric: tabular-nums; color: var(--body); }
+.rates tbody tr:last-child th, .rates tbody tr:last-child td { border-bottom: 0; }
+.rates tbody tr:hover { background: var(--canvas); }
+.table-note { margin: .9rem 0 0; font-size: .88rem; color: var(--muted); }
+
+/* ---------- A gallery holding a single full-bleed image (the conference flyer) ---------- */
+.event-flyer[data-gallery] { display: block; }
+.event-flyer[data-gallery] button {
+  display: block; width: 100%; padding: 0; border: 0; background: none;
+  cursor: zoom-in; line-height: 0; border-radius: var(--radius);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.event-flyer[data-gallery] button:hover { transform: translateY(-2px); }
+.event-flyer[data-gallery] img {
+  width: 100%; height: auto; aspect-ratio: auto; object-fit: fill;
+  border-radius: var(--radius); box-shadow: var(--shadow-m);
+}
+.event-flyer[data-gallery] button:hover img { box-shadow: var(--shadow-l); }
+.event-flyer[data-gallery] figcaption {
+  display: flex; flex-direction: column; align-items: center; gap: .25rem;
+}
+.event-flyer figcaption a { color: var(--teal-600); font-weight: 600; }

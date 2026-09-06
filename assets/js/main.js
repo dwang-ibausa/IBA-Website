@@ -191,6 +191,9 @@
 
   var picture = box.querySelector("img");
   var counter = box.querySelector("[data-count]");
+
+  /* a gallery of one (the conference flyer) needs no paging controls */
+  if (sources.length < 2) box.querySelector(".lightbox__bar").hidden = true;
   var lastFocus = null;
 
   function show(i) {

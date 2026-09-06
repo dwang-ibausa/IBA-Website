@@ -7,8 +7,10 @@ Two kinds of image are used on this site, and they behave differently.
 | Path | Used on |
 |---|---|
 | `assets/img/iba-2026-conference-flyer.jpg` | Annual Conference page, beside the description |
-| `assets/img/iba-2026-conference-flyer.pdf` | Opens when the flyer image is clicked |
-| `assets/img/register-qr.png` | Registration QR on the Annual Conference page, cropped from the flyer |
+| `assets/img/iba-2026-conference-flyer-large.jpg` | Full-size flyer, opened by the lightbox |
+| `assets/img/iba-2026-conference-flyer.pdf` | Offered as a download beneath the flyer |
+| `assets/img/register-qr.png` | Conference registration QR, cropped from the flyer |
+| `assets/img/membership-qr.png` | Membership signup QR, generated from the flyer's own link |
 | `assets/img/sponsors/*.png` | Sponsorship page, one per organization |
 
 The sponsor logos are trimmed of their surrounding whitespace and scaled to 200px

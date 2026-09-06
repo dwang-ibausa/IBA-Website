@@ -26,12 +26,12 @@ Ctrl+F5 on Windows) before assuming the upload failed.
 | `event-bbq-2026.html` | Detail page: 2026 BBQ & Music Festival |
 | `assets/css/styles.css` | All styling. Design tokens are at the top |
 | `assets/js/main.js` | Navigation, language toggle, event sorting, image fallbacks, lightbox |
-| `assets/img/` | Conference flyer, registration QR, and sponsor logos in `sponsors/` |
+| `assets/img/` | Conference flyer, the two QR codes, and sponsor logos in `sponsors/` |
 | `ASSETS.md` | Where every image comes from, and which ones are still hosted elsewhere |
 | `download-assets.sh` | One-off script to pull the remaining remote images into the repo |
 
-There is **no templating**. The header and footer are copied into all seven pages,
-so a change to the navigation or the footer has to be made in all seven. This is
+There is **no templating**. The header and footer are copied into all eight pages,
+so a change to the navigation or the footer has to be made in all eight. This is
 deliberate: it keeps the site dependency-free, at the cost of that one chore.
 
 ## How the site works
@@ -84,7 +84,7 @@ reads correctly if JavaScript is unavailable.
    (English and Chinese).
 3. Create a detail page. `event-conference-2026.html` is the simplest starting
    point. Update the `data-event-past-notice` date on it to match.
-4. Add the page to the footer's Events list — in all seven files.
+4. Add it to the navigation in all eight files if it needs its own tab.
 
 ### Sponsor logos
 
@@ -97,6 +97,23 @@ image. To add a sponsor, copy a tile and change the `href`, `src`, `alt`,
 The last tile is different: it is a `.logo-card--contact` information card rather
 than a link, because that sponsor is an individual with a phone number rather than
 a website.
+
+### The conference flyer
+
+The flyer is shown as an image, not an embedded PDF, because an image renders the
+same on every device and needs no plugin. Clicking it opens the full-size version
+in the lightbox; a link underneath downloads the PDF for anyone who wants to print
+it. Three files back this:
+
+| File | Role |
+|---|---|
+| `iba-2026-conference-flyer.jpg` | 1200px, shown on the page |
+| `iba-2026-conference-flyer-large.jpg` | 2000px, opened by the lightbox |
+| `iba-2026-conference-flyer.pdf` | the original, offered as a download |
+
+When a new flyer arrives, regenerate all three from the PDF at 300 dpi and check
+that the QR codes still decode from the 1200px version, since people scan them
+straight off the screen.
 
 ### Optional images
 
@@ -139,6 +156,13 @@ Colours, spacing and shadows are CSS custom properties in `:root` at the top of
 
 ## Known gaps
 
+- **Both QR codes were generated or cropped from the printed flyer**, and each was
+  decoded again afterwards to confirm it resolves to the intended URL. Do the same
+  if either is ever replaced, so the page and the flyer can never disagree.
+- **The membership signup link still carries the former organization's name** in its
+  address (`.../chinese-biopharmaceutical-association-usa-greater-philadelphias-memberships`).
+  It works, but anyone who looks at the link sees CBA-GP rather than IBA. Worth
+  moving to a new Zeffy campaign at some point.
 - **Conference registration** runs on Zeffy. Both the button and the QR code on
   `event-conference-2026.html` point at
   `https://www.zeffy.com/en-US/ticketing/2026-iba-annual-conference`. The QR image
