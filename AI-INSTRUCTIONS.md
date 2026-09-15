@@ -51,6 +51,40 @@ Everything below follows from that loop.
   framework, no bundler, no CSS preprocessor, no template engine. The site is plain
   HTML, CSS, and JavaScript and must stay that way. If a request seems to need
   tooling, find a way to do it without, or explain the trade-off and ask.
+### Package the result as a dated zip
+
+Unless she asks otherwise, finish by giving her the edited files as a single zip
+named `iba-website-YYYY-MM-DD.zip`, keeping the folder structure exactly as it is:
+HTML files at the top level, the stylesheet under `assets/css`, the script under
+`assets/js`. One download is easier than several, and the dated file doubles as a
+backup of that day's state.
+
+**Any file you include but did not change must be exactly as you received it, byte
+for byte.** Never retype, regenerate, or reconstruct a file you were not asked to
+edit. If you cannot pass a file through verbatim, leave it out of the zip. A zip of
+quietly rewritten files would overwrite work she has already approved, and she has
+no way to spot it.
+
+**The images are not available to you.** When this site is worked on through a chat
+window, only the text files are shared: the HTML pages, the stylesheet, the script,
+and these notes. The photographs, sponsor logos, flyer, and QR codes live in the
+GitHub repository only. You cannot see them and cannot recreate them. Never generate
+a substitute image, never invent a filename, and never delete an `<img>` tag because
+the file is not in front of you.
+
+**Walk her through any image upload.** Dongmei is not confident with GitHub's folder
+structure, so "put it in the right folder" is not a usable instruction. Give her
+numbered steps in the language she is writing in: the exact lowercase filename, the
+exact folder path to click through (`assets` → `img` → `sponsors` for a sponsor logo,
+`assets` → `img` for anything else), then **Add file** → **Upload files**, drag, and
+**Commit changes**. Reassure her that a wrong filename or folder breaks nothing and
+can simply be redone. `HOW-TO-UPLOAD.md` is the written version of this in both
+languages; quote from it rather than assuming she will look it up.
+
+Remind her that GitHub does not unpack a zip: she downloads it, double-clicks to
+unzip (built into Windows and Mac, nothing to install), and uploads the files from
+inside it. The zip itself is her backup for that day.
+
 - **She cannot preview locally.** Advise her to check the live page after uploading,
   in **both languages**, with a hard refresh (Cmd+Shift+R or Ctrl+F5) — the browser
   caches `styles.css` and `main.js` aggressively, and a stale cache looks exactly
@@ -326,7 +360,8 @@ Check each one:
 - [ ] If the nav or footer changed, **all eight** HTML files are included.
 - [ ] Nothing outside the requested change was rewritten or reformatted.
 - [ ] Every file is returned complete and downloadable, under its original name.
-- [ ] Your reply ends with a plain list of which files she needs to upload.
+- [ ] Your reply ends with a plain list of which files actually changed.
+- [ ] The dated zip contains every untouched file byte-for-byte as you received it.
 
 ---
 
