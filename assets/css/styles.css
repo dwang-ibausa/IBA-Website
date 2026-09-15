@@ -513,8 +513,8 @@ html[data-site-lang="zh"] h3 { letter-spacing: 0; }
 .nav a.btn--primary[aria-current="page"]::after { display: none; }
 
 /* Stat strip reads better as a single column when it sits beside body copy */
-.stats--stack { grid-template-columns: 1fr; }
-.stats--stack .stat { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center; text-align: left; padding: 1.4rem 1.6rem; }
+.stats--stack { grid-template-columns: 1fr; box-shadow: var(--shadow-s); }
+.stats--stack .stat { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center; text-align: left; padding: 1.4rem 1.6rem; background: var(--canvas-2); }
 .stats--stack .stat__num { font-size: 1.9rem; min-width: 4.2rem; }
 .stats--stack .stat__label { font-size: .9rem; }
 
