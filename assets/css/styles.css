@@ -463,6 +463,9 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   letter-spacing: .13em; text-transform: uppercase;
 }
 .site-footer__contact a { font-size: 1rem; }
+.site-footer__contact a.site-footer__linkedin { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 4px; background: #0a66c2; color: #fff; font-size: 1.1rem; font-weight: 800; line-height: 1; text-decoration: none; }
+.site-footer__contact a.site-footer__linkedin:hover { background: #004182; color: #fff; text-decoration: none; }
+.site-footer__linkedin-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 620px) {
   .site-footer__contact { align-items: flex-start; text-align: left; }
 }
