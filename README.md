@@ -13,6 +13,13 @@ If the site looks unchanged after a deploy, the browser is almost certainly serv
 a cached copy of `styles.css` or `main.js`. Hard-refresh with Cmd+Shift+R (or
 Ctrl+F5 on Windows) before assuming the upload failed.
 
+## If you are handing this to an AI assistant
+
+`AI-INSTRUCTIONS.md` in this folder is written for that purpose. Upload it alongside
+whichever files need changing and ask the assistant to read it first. It covers the
+upload-and-replace workflow, the bilingual requirement, the house style, and the
+facts that should not be changed.
+
 ## Files
 
 | File | What it is |
@@ -27,6 +34,7 @@ Ctrl+F5 on Windows) before assuming the upload failed.
 | `assets/css/styles.css` | All styling. Design tokens are at the top |
 | `assets/js/main.js` | Navigation, language toggle, event sorting, image fallbacks, lightbox |
 | `assets/img/` | Conference flyer, the two QR codes, and sponsor logos in `sponsors/` |
+| `AI-INSTRUCTIONS.md` | Guide for an AI assistant asked to edit this site |
 | `ASSETS.md` | Where every image comes from, and which ones are still hosted elsewhere |
 | `download-assets.sh` | One-off script to pull the remaining remote images into the repo |
 
