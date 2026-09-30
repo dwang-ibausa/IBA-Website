@@ -164,6 +164,46 @@
     }
   );
 
+  /* ---------- Conference PDF viewer ---------- */
+  var pdfButtons = document.querySelectorAll("[data-pdf-open]");
+  var pdfBox = document.querySelector("[data-pdf-viewer]");
+  if (pdfButtons.length && pdfBox) {
+    var pdfFrame = pdfBox.querySelector("[data-pdf-frame]");
+    var pdfClose = pdfBox.querySelector("[data-pdf-close]");
+    var pdfLastFocus = null;
+
+    function closePdf() {
+      pdfBox.classList.remove("is-open");
+      pdfBox.setAttribute("aria-hidden", "true");
+      pdfFrame.removeAttribute("src");
+      document.body.style.overflow = "";
+      if (pdfLastFocus) pdfLastFocus.focus();
+    }
+
+    Array.prototype.forEach.call(pdfButtons, function (pdfButton) {
+      pdfButton.addEventListener("click", function () {
+        var lang = document.documentElement.getAttribute("data-site-lang") === "zh" ? "zh" : "en";
+        pdfLastFocus = document.activeElement;
+        var title = pdfButton.getAttribute("data-title-" + lang);
+        pdfBox.setAttribute("aria-label", title);
+        pdfClose.setAttribute("aria-label", pdfClose.getAttribute("data-label-" + lang));
+        pdfFrame.setAttribute("title", title + " PDF");
+        pdfFrame.src = pdfButton.getAttribute("data-pdf-open");
+        pdfBox.setAttribute("aria-hidden", "false");
+        pdfBox.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        pdfClose.focus();
+      });
+    });
+    pdfClose.addEventListener("click", closePdf);
+    pdfBox.addEventListener("click", function (e) {
+      if (e.target === pdfBox) closePdf();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && pdfBox.classList.contains("is-open")) closePdf();
+    });
+  }
+
   /* ---------- 6. Lightbox ---------- */
   var gallery = document.querySelector("[data-gallery]");
   if (!gallery) return;
