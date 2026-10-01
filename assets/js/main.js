@@ -182,6 +182,12 @@
 
     Array.prototype.forEach.call(pdfButtons, function (pdfButton) {
       pdfButton.addEventListener("click", function () {
+        /* Mobile PDF embeds can expose only the first page. Open the original
+           document at the top level so the browser can navigate every page. */
+        if (window.matchMedia("(max-width: 860px), (pointer: coarse)").matches) {
+          window.location.assign(pdfButton.getAttribute("data-pdf-open"));
+          return;
+        }
         var lang = document.documentElement.getAttribute("data-site-lang") === "zh" ? "zh" : "en";
         pdfLastFocus = document.activeElement;
         var title = pdfButton.getAttribute("data-title-" + lang);
