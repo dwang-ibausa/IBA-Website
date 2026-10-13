@@ -211,8 +211,7 @@
   }
 
   /* ---------- 6. Lightbox ---------- */
-  var gallery = document.querySelector("[data-gallery]");
-  if (!gallery) return;
+  document.querySelectorAll("[data-gallery]").forEach(function (gallery) {
 
   var sources = Array.prototype.map.call(
     gallery.querySelectorAll("img"),
@@ -276,5 +275,6 @@
     if (e.key === "Escape") close();
     if (e.key === "ArrowLeft") show(index - 1);
     if (e.key === "ArrowRight") show(index + 1);
+  });
   });
 })();
