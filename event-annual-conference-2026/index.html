@@ -16,6 +16,8 @@
 .conference-program button { display:block; width:100%; padding:0; border:1px solid var(--line); background:#fff; cursor:zoom-in; }
 .conference-program img { display:block; width:100%; height:auto; }
 .registration-deadline { padding:1rem 1.3rem; background:#fff4d6; border-left:4px solid #a66b00; border-radius:6px; margin:0 0 1.8rem; }
+.program-actions { display:flex; align-items:stretch; gap:.75rem; width:100%; max-width:560px; }
+.program-actions .btn { flex:1; min-width:0; justify-content:center; font-family:inherit; line-height:inherit; }
 
 .program-book { width:96vw; max-width:1800px; max-height:96dvh; padding:0; border:0; border-radius:10px; background:#e8edf1; color:#17344d; }
 .program-book::backdrop { background:rgba(0,0,0,.85); }
@@ -147,7 +149,7 @@
     <hr class="rule">
     <p data-lang="en">All 26 pages are shown below. Click any page to open the book view, with each session and its biographies together. The supplied program is in English.</p>
     <p data-lang="zh">全部26页会议手册如下。点击任意页面可打开书本视图，专题介绍与讲者简介同时呈现。会议手册原文为英文。</p>
-    <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap">
+    <div class="program-actions">
       <button class="btn btn--primary" type="button" data-book-open><span data-lang="en">Open Program Book</span><span data-lang="zh">打开会议手册</span></button>
       <a class="btn btn--primary" href="/assets/img/iba-2026-annual-conference-program.pdf" download><span data-lang="en">Download Program PDF</span><span data-lang="zh">下载会议手册 PDF</span></a>
     </div>
