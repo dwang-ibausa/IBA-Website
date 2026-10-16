@@ -12,6 +12,16 @@
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="canonical" href="https://iba-usa.org/event-annual-conference-2026/">
 <style>
+.conference-overview-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.attendee-organizations { min-width: 0; }
+.attendee-organizations h2 { margin-top: 0; }
+.attendee-organizations summary { cursor: pointer; color: var(--navy-800); font-weight: 650; padding: .8rem 0; }
+.organization-list { columns: 2; column-gap: 1.5rem; padding-left: 1.2rem; margin-top: .8rem; }
+.organization-list li { break-inside: avoid; overflow-wrap: anywhere; padding: 0 0 .6rem .15rem; }
+@media (max-width: 960px) { .conference-overview-grid { grid-template-columns: 1fr; gap: 1.5rem; } .organization-list { columns: 3; } }
+@media (max-width: 640px) { .organization-list { columns: 2; } }
+@media (max-width: 380px) { .organization-list { columns: 1; } }
+
 .conference-overview { padding-bottom: 1.5rem; }
 #program { padding-top: 1.5rem; }
 .conference-overview .prose > p:last-of-type { margin-bottom: 0; }
@@ -100,7 +110,7 @@
       </div>
     </dl>
 
-    <div>
+    <div class="conference-overview-grid">
       <div class="prose">
         <h2 data-lang="en">About the Annual Conference</h2>
         <h2 data-lang="zh">关于年会</h2>
@@ -129,7 +139,112 @@
           </div>
         </div>
       </div>
-
+      <aside class="attendee-organizations" aria-labelledby="organizations-title">
+        <h2 id="organizations-title"><span data-lang="en">Organizations Represented by Registered Attendees</span><span data-lang="zh">已报名参会者所属机构</span></h2>
+        <hr class="rule">
+        <p data-lang="en">95 named companies and business affiliations represented in current registrations.</p>
+        <p data-lang="zh">目前报名者的所属企业及商业机构共计 95 家。</p>
+        <details>
+          <summary><span data-lang="en">View All 95 Organizations</span><span data-lang="zh">查看全部 95 家机构</span></summary>
+          <ul class="organization-list">
+            <li>Aclaris Therapeutics</li>
+            <li>AiMi Health</li>
+            <li>AlphaThera</li>
+            <li>Amerisist International</li>
+            <li>Amucus Therapeutics</li>
+            <li>Arcturus Therapeutics</li>
+            <li>Astatech</li>
+            <li>ATP Ventures Partner</li>
+            <li>BeOne Medicine</li>
+            <li>BioNTech</li>
+            <li>BMS</li>
+            <li>Boehringer Ingelheim</li>
+            <li>Celltrion USA</li>
+            <li>Corxel Pharmaceuticals</li>
+            <li>Curanex Pharmaceuticals</li>
+            <li>Cytokinetics</li>
+            <li>Deep Intelligent Pharma</li>
+            <li>DeMi Elite</li>
+            <li>DermalBright Pharma</li>
+            <li>Duality Biologics</li>
+            <li>DuPont-Qnity</li>
+            <li>EDETEK</li>
+            <li>Eli Lilly</li>
+            <li>Eureka Biotech</li>
+            <li>Exegenesis Bio</li>
+            <li>Exin BioPharma</li>
+            <li>Exreprotein</li>
+            <li>Fish &amp; Richardson</li>
+            <li>Franklin Bio Lab</li>
+            <li>Frontage Laboratories</li>
+            <li>GB-Partner</li>
+            <li>GemPharmatech</li>
+            <li>Gencell</li>
+            <li>Genentech</li>
+            <li>Great Wall Intelligent Medicine</li>
+            <li>GSK</li>
+            <li>Halcyon Bound</li>
+            <li>Hepabio</li>
+            <li>Horton</li>
+            <li>Humphries Pharmaceutical Consulting Company</li>
+            <li>HW Life Science</li>
+            <li>Incyte</li>
+            <li>Ionova Life Sciences</li>
+            <li>iPHASE</li>
+            <li>ITI</li>
+            <li>Johnson &amp; Johnson</li>
+            <li>K2VC</li>
+            <li>KPMG</li>
+            <li>Legend Biotech</li>
+            <li>Madrigal Pharmaceuticals</li>
+            <li>MedSurgPI</li>
+            <li>Merck</li>
+            <li>Moderna</li>
+            <li>MolAIcule</li>
+            <li>NiKang Therapeutics</li>
+            <li>NXT Power</li>
+            <li>opAIda.ai</li>
+            <li>OriMAbs</li>
+            <li>PanaCRO</li>
+            <li>Pfizer</li>
+            <li>PharmaBlock</li>
+            <li>Pharmanique Consulting</li>
+            <li>PharmaSynergy</li>
+            <li>PharmTracks Consulting</li>
+            <li>Pinion Immunotherapeutics</li>
+            <li>Pinnacle Medicines</li>
+            <li>Porton Advanced</li>
+            <li>Power4</li>
+            <li>PPI Therapeutics</li>
+            <li>Prelude Therapeutics</li>
+            <li>ProBio</li>
+            <li>Pysix Oncology</li>
+            <li>Quanta Pharmaceutics</li>
+            <li>Quanta Therapeutics</li>
+            <li>Red Stone Capital</li>
+            <li>Salesforce</li>
+            <li>Sanofi</li>
+            <li>Sanyou (USA) Biopharmaceuticals</li>
+            <li>Seed Therapeutics</li>
+            <li>Sidocel</li>
+            <li>Siegfried</li>
+            <li>SKY Pharmaceutical Development</li>
+            <li>SunRegen Healthcare</li>
+            <li>Syncromune</li>
+            <li>Synnovationtx</li>
+            <li>Taihill Venture</li>
+            <li>Teva Pharmaceuticals</li>
+            <li>The Vanguard Group</li>
+            <li>TriApex Laboratories</li>
+            <li>Wilmington PharmaTech</li>
+            <li>World Biotech Capital</li>
+            <li>WuXi AppTec</li>
+            <li>WuXi Biologics</li>
+            <li>WuXi XDC</li>
+            <li>ZS Associates</li>
+          </ul>
+        </details>
+      </aside>
     </div>
   </div>
 </section>
