@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="canonical" href="https://iba-usa.org/sponsorship/">
 <style>
-/* Sponsor emphasis applies only to this page. */
+/* Sponsor logo sizing applies only to this page. */
 .logo-grid--sponsors .logo-card img {
   width: 72%;
   max-width: 160px;
@@ -20,14 +20,21 @@
   height: auto;
   object-fit: contain;
 }
-.logo-grid--sponsors .logo-card--frontage {
-  grid-column: 1 / -1;
-  min-height: 160px;
+.logo-grid--sponsors img[src$="frontage.png"] {
+  width: 94%;
+  max-width: 220px;
+  max-height: 75px;
 }
-.logo-grid--sponsors .logo-card--frontage img {
-  width: 86%;
-  max-width: 420px;
-  max-height: 100px;
+.logo-grid--sponsors img[src$="kpmg.png"] {
+  width: 100%;
+  max-width: 220px;
+  max-height: 82px;
+}
+.logo-grid--sponsors img[src$="acro-biosystems.png"],
+.logo-grid--sponsors img[src$="iphase.png"] {
+  width: 54%;
+  max-width: 120px;
+  max-height: 42px;
 }
 </style>
 </head>
@@ -71,7 +78,7 @@
     <p data-lang="en">Our thanks to the companies and institutions below. Select a logo to visit that organization.</p>
     <p data-lang="zh">谨向以下企业与机构致谢。点击标识即可访问对方网站。</p>
     <div class="logo-grid logo-grid--sponsors">
-      <a class="logo-card logo-card--frontage" href="https://www.frontagelab.com/" target="_blank" rel="noopener noreferrer">
+      <a class="logo-card" href="https://www.frontagelab.com/" target="_blank" rel="noopener noreferrer">
         <img src="/assets/img/sponsors/frontage.png" alt="Frontage Laboratories" loading="lazy" data-name="Frontage Laboratories" data-name-zh="Frontage Laboratories">
       </a>
       <a class="logo-card" href="https://opaida.ai/" target="_blank" rel="noopener noreferrer">
