@@ -53,6 +53,16 @@
   .attendee-organizations .organization-scroll { flex: 1 1 0; overflow: hidden; }
   .attendee-organizations .organization-list { flex: 1 1 0; min-height: 0; max-height: none; overflow-y: scroll; }
 }
+
+.conference-highlights { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.conference-highlights__intro { max-width: 760px; }
+.conference-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.conference-photo-grid figure { min-width: 0; margin: 0; }
+.conference-photo-grid button { display: block; width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #edf2f6; cursor: zoom-in; }
+.conference-photo-grid button:focus-visible { outline: 3px solid var(--teal-600); outline-offset: 3px; }
+.conference-photo-grid img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+.conference-photo-grid figcaption { margin-top: .5rem; font-size: .875rem; line-height: 1.45; color: var(--navy-800); }
+@media (max-width: 760px) { .conference-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem .75rem; } }
 </style>
 </head>
 <body>
@@ -114,7 +124,7 @@
       </div>
       <div class="fact">
         <dt><span data-lang="en">Registration</span><span data-lang="zh">报名</span></dt>
-        <dd><span data-lang="en">Open now</span><span data-lang="zh">现已开放</span><small><a href="https://www.zeffy.com/en-US/ticketing/2026-iba-annual-conference" target="_blank" rel="noopener"><span data-lang="en">Register online</span><span data-lang="zh">在线报名</span></a></small></dd>
+        <dd><span data-lang="en">Closed</span><span data-lang="zh">已结束</span></dd>
       </div>
     </dl>
 
@@ -126,26 +136,15 @@
         <p data-lang="zh"><strong>IBA 年会</strong>是协会面向生物医药行业的年度重要活动，汇聚生物医药企业高管、行业领袖、科学家、创业者与投资人，交流见解、探索新兴创新成果，并推动药物研发生态中各方的战略合作。</p>
         <p data-lang="en">The theme of the <strong>2026 Annual Conference</strong>, <em>&ldquo;Converging Innovations: AI, Next-Generation Biomedical Science, and Global Drug Development,&rdquo;</em> reflects the rapidly evolving biopharmaceutical landscape and the growing importance of collaboration across science, technology, and industry.</p>
         <p data-lang="zh"><strong>2026 年会</strong>以<em>&ldquo;创新汇聚：人工智能、新一代生物医学科学与全球药物研发&rdquo;</em>为主题，体现了生物医药行业的快速发展，以及跨科学、技术与产业协作日益重要的作用。</p>
-        <p data-lang="en">The full-day program features <strong>10 sessions</strong> covering artificial intelligence and real-world evidence, oncology, neurological diseases, cardiovascular and metabolic diseases, new approach methodologies (NAMs) and organoids, statistics and regulatory strategy, CMC challenges, entrepreneurship and business development, and career development.</p>
-        <p data-lang="zh">全天议程设有<strong>10 个环节</strong>，涵盖人工智能与真实世界证据、肿瘤、神经系统疾病、心血管与代谢疾病、新方法学（NAMs）与类器官、统计与法规策略、CMC 挑战、创业与商务拓展，以及职业发展。</p>
+        <p data-lang="en">The full-day program featured <strong>10 sessions</strong> covering artificial intelligence and real-world evidence, oncology, neurological diseases, cardiovascular and metabolic diseases, new approach methodologies (NAMs) and organoids, statistics and regulatory strategy, CMC challenges, entrepreneurship and business development, and career development.</p>
+        <p data-lang="zh">全天议程设置了<strong>10 个环节</strong>，涵盖人工智能与真实世界证据、肿瘤、神经系统疾病、心血管与代谢疾病、新方法学（NAMs）与类器官、统计与法规策略、CMC 挑战、创业与商务拓展，以及职业发展。</p>
         <p data-lang="en">The final attendee affiliation list represents <strong>more than 100 companies and business organizations</strong> and includes <strong>more than 60 executives and senior leaders</strong>, alongside <strong>11 sponsoring organizations</strong>. This industry participation provided opportunities to connect with decision-makers, exchange perspectives, explore business opportunities, and build strategic partnerships.</p>
         <p data-lang="zh">最终参会者所属机构名单涵盖<strong>100 多家企业及商业机构</strong>，并包含<strong>60 余位高管及高级领导者</strong>，同时有<strong>11 家赞助机构</strong>支持。广泛的行业参与为参会者提供了与决策者建立联系、交流观点、探索商业机会和建立战略伙伴关系的宝贵机会。</p>
-        <p data-lang="en">The conference will conclude with an <strong>Evening Keynote, Networking Dinner, and Live Entertainment</strong>, offering attendees a relaxed and enjoyable setting to continue conversations, strengthen relationships, and celebrate the spirit of innovation and collaboration.</p>
-        <p data-lang="zh">年会将以<strong>晚间主旨演讲、交流晚宴与现场文艺表演</strong>收尾，为参会者提供轻松愉快的氛围，继续交流、增进联系，并共同庆祝创新与合作的精神。</p>
-        <p data-lang="en"><strong>Join us for a day of innovation, leadership, and meaningful connections&mdash;bringing together the people and ideas shaping the future of biopharmaceutical development.</strong></p>
-        <p data-lang="zh"><strong>诚邀您共度汇聚创新、领导力与深度交流的一天，连接共同塑造生物医药研发未来的人才与思想。</strong></p>
-        <p data-lang="en">Registration is open. Seats are limited, so please register early.</p>
-        <p data-lang="zh">报名现已开放。名额有限，敬请及早报名。</p>
+        <p data-lang="en">The conference concluded with an <strong>Evening Keynote, Networking Dinner, and Live Entertainment</strong>, offering attendees a relaxed and enjoyable setting to continue conversations, strengthen relationships, and celebrate the spirit of innovation and collaboration.</p>
+        <p data-lang="zh">年会以<strong>晚间主旨演讲、交流晚宴与现场文艺表演</strong>收尾，为参会者提供轻松愉快的氛围，继续交流、增进联系，并共同庆祝创新与合作的精神。</p>
+        <p data-lang="en"><strong>Thank you for a day of innovation, leadership, and meaningful connections, bringing together the people and ideas shaping the future of biopharmaceutical development.</strong></p>
+        <p data-lang="zh"><strong>感谢大家共同度过汇聚创新、领导力与深度交流的一天，连接共同塑造生物医药研发未来的人才与思想。</strong></p>
 
-        <div class="register">
-          <img class="register__qr" src="/assets/img/register-qr.png" width="150" height="150"
-               alt="QR code linking to the IBA 2026 Annual Conference registration page" loading="lazy">
-          <div class="register__body">
-            <a class="btn btn--primary" href="https://www.zeffy.com/en-US/ticketing/2026-iba-annual-conference" target="_blank" rel="noopener"><span data-lang="en">Register for the conference</span><span data-lang="zh">立即报名参加年会</span></a>
-            <p class="register__note" data-lang="en">Or scan the code with your phone camera.</p>
-            <p class="register__note" data-lang="zh">也可使用手机相机扫描二维码。</p>
-          </div>
-        </div>
       </div>
       <aside class="attendee-organizations" aria-labelledby="organizations-title">
         <h2 id="organizations-title"><span data-lang="en">Organizations Represented by Attendees</span><span data-lang="zh">参会者所属机构</span></h2>
@@ -270,6 +269,117 @@
   </div>
 </section>
 
+<section class="section conference-highlights" id="highlights" aria-labelledby="highlights-title">
+  <div class="wrap">
+    <h2 id="highlights-title"><span data-lang="en">Conference Highlights</span><span data-lang="zh">年会精彩回顾</span></h2>
+    <hr class="rule">
+    <div class="conference-highlights__intro">
+      <p data-lang="en">Thank you to everyone who joined the IBA 2026 Annual Conference on October 18. Revisit the scientific discussions, new connections, and shared moments that made the day memorable.</p>
+      <p data-lang="zh">感谢每一位参加 10 月 18 日 IBA 2026 年会的朋友。让我们通过现场照片，回顾科学交流、相识相聚与携手同行的精彩瞬间。</p>
+      <p data-lang="en">Select a photo to enlarge it. Use the arrows to browse the gallery.</p>
+      <p data-lang="zh">点击照片可放大，并使用左右箭头浏览相册。</p>
+    </div>
+    <div class="conference-photo-grid" data-gallery>
+      <figure>
+        <button type="button" data-index="0" aria-label="Conference Group Photo / 年会大合影"><img src="/assets/img/conference-highlights-2026/group-photo-thumb.jpg" data-full="/assets/img/conference-highlights-2026/group-photo.jpg" alt="Conference Group Photo / 年会大合影" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Conference Group Photo</span><span data-lang="zh">年会大合影</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="1" aria-label="Welcome and Opening Remarks / 欢迎与开幕致辞"><img src="/assets/img/conference-highlights-2026/welcome-thumb.jpg" data-full="/assets/img/conference-highlights-2026/welcome.jpg" alt="Welcome and Opening Remarks / 欢迎与开幕致辞" width="669" height="600" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Welcome and Opening Remarks</span><span data-lang="zh">欢迎与开幕致辞</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="2" aria-label="Keynote Speaker: Filippos / 主旨演讲嘉宾：Filippos"><img src="/assets/img/conference-highlights-2026/keynote-filippos-thumb.jpg" data-full="/assets/img/conference-highlights-2026/keynote-filippos.jpg" alt="Keynote Speaker: Filippos / 主旨演讲嘉宾：Filippos" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Keynote Speaker: Filippos</span><span data-lang="zh">主旨演讲嘉宾：Filippos</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="3" aria-label="Keynote Speaker: Anthony / 主旨演讲嘉宾：Anthony"><img src="/assets/img/conference-highlights-2026/keynote-thumb.jpg" data-full="/assets/img/conference-highlights-2026/keynote.jpg" alt="Keynote Speaker: Anthony / 主旨演讲嘉宾：Anthony" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Keynote Speaker: Anthony</span><span data-lang="zh">主旨演讲嘉宾：Anthony</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="4" aria-label="Online Keynote Speaker: Peter / 线上主旨演讲嘉宾：Peter"><img src="/assets/img/conference-highlights-2026/keynote-peter-thumb.jpg" data-full="/assets/img/conference-highlights-2026/keynote-peter.jpg" alt="Online Keynote Speaker: Peter / 线上主旨演讲嘉宾：Peter" width="720" height="494" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Online Keynote Speaker: Peter</span><span data-lang="zh">线上主旨演讲嘉宾：Peter</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="5" aria-label="Morning Keynote Speakers / 上午主旨演讲嘉宾"><img src="/assets/img/conference-highlights-2026/keynote-group-thumb.jpg" data-full="/assets/img/conference-highlights-2026/keynote-group.jpg" alt="Morning Keynote Speakers / 上午主旨演讲嘉宾" width="720" height="486" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Morning Keynote Speakers</span><span data-lang="zh">上午主旨演讲嘉宾</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="6" aria-label="Keynote Speaker: Hugh / 主旨演讲嘉宾：Hugh"><img src="/assets/img/conference-highlights-2026/keynote-hugh-thumb.jpg" data-full="/assets/img/conference-highlights-2026/keynote-hugh.jpg" alt="Keynote Speaker: Hugh / 主旨演讲嘉宾：Hugh" width="720" height="563" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Keynote Speaker: Hugh</span><span data-lang="zh">主旨演讲嘉宾：Hugh</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="7" aria-label="Keynote Speaker: Ming / 主旨演讲嘉宾：Ming"><img src="/assets/img/conference-highlights-2026/keynote-ming-thumb.jpg" data-full="/assets/img/conference-highlights-2026/keynote-ming.jpg" alt="Keynote Speaker: Ming / 主旨演讲嘉宾：Ming" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Keynote Speaker: Ming</span><span data-lang="zh">主旨演讲嘉宾：Ming</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="8" aria-label="Diamond Sponsor Spotlight: Wu / 钻石赞助商风采：Wu"><img src="/assets/img/conference-highlights-2026/diamond-wu-thumb.jpg" data-full="/assets/img/conference-highlights-2026/diamond-wu.jpg" alt="Diamond Sponsor Spotlight: Wu / 钻石赞助商风采：Wu" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Diamond Sponsor Spotlight: Wu</span><span data-lang="zh">钻石赞助商风采：Wu</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="9" aria-label="Diamond Sponsor Spotlight: Kevin / 钻石赞助商风采：Kevin"><img src="/assets/img/conference-highlights-2026/diamond-kevin-thumb.jpg" data-full="/assets/img/conference-highlights-2026/diamond-kevin.jpg" alt="Diamond Sponsor Spotlight: Kevin / 钻石赞助商风采：Kevin" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Diamond Sponsor Spotlight: Kevin</span><span data-lang="zh">钻石赞助商风采：Kevin</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="10" aria-label="AI and Real-World Evidence / 人工智能与真实世界证据"><img src="/assets/img/conference-highlights-2026/ai-rwe-thumb.jpg" data-full="/assets/img/conference-highlights-2026/ai-rwe.jpg" alt="AI and Real-World Evidence / 人工智能与真实世界证据" width="720" height="538" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">AI and Real-World Evidence</span><span data-lang="zh">人工智能与真实世界证据</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="11" aria-label="Cardiovascular and Metabolic Diseases / 心血管与代谢疾病"><img src="/assets/img/conference-highlights-2026/cardiovascular-thumb.jpg" data-full="/assets/img/conference-highlights-2026/cardiovascular.jpg" alt="Cardiovascular and Metabolic Diseases / 心血管与代谢疾病" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Cardiovascular and Metabolic Diseases</span><span data-lang="zh">心血管与代谢疾病</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="12" aria-label="Entrepreneurship and Business Development / 创业与商务拓展"><img src="/assets/img/conference-highlights-2026/business-development-thumb.jpg" data-full="/assets/img/conference-highlights-2026/business-development.jpg" alt="Entrepreneurship and Business Development / 创业与商务拓展" width="720" height="367" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Entrepreneurship and Business Development</span><span data-lang="zh">创业与商务拓展</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="13" aria-label="Oncology Session / 肿瘤专题"><img src="/assets/img/conference-highlights-2026/oncology-thumb.jpg" data-full="/assets/img/conference-highlights-2026/oncology.jpg" alt="Oncology Session / 肿瘤专题" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Oncology Session</span><span data-lang="zh">肿瘤专题</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="14" aria-label="Neurological Diseases Discussion / 神经系统疾病讨论"><img src="/assets/img/conference-highlights-2026/neuroscience-thumb.jpg" data-full="/assets/img/conference-highlights-2026/neuroscience.jpg" alt="Neurological Diseases Discussion / 神经系统疾病讨论" width="720" height="457" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Neurological Diseases Discussion</span><span data-lang="zh">神经系统疾病讨论</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="15" aria-label="NAMs and Organoids / 新方法学（NAMs）与类器官"><img src="/assets/img/conference-highlights-2026/nams-organoids-thumb.jpg" data-full="/assets/img/conference-highlights-2026/nams-organoids.jpg" alt="NAMs and Organoids / 新方法学（NAMs）与类器官" width="720" height="482" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">NAMs and Organoids</span><span data-lang="zh">新方法学（NAMs）与类器官</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="16" aria-label="CMC Panel Discussion / CMC 专题讨论"><img src="/assets/img/conference-highlights-2026/cmc-thumb.jpg" data-full="/assets/img/conference-highlights-2026/cmc.jpg" alt="CMC Panel Discussion / CMC 专题讨论" width="720" height="573" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">CMC Panel Discussion</span><span data-lang="zh">CMC 专题讨论</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="17" aria-label="Statistics Session / 统计专题"><img src="/assets/img/conference-highlights-2026/statistics-thumb.jpg" data-full="/assets/img/conference-highlights-2026/statistics.jpg" alt="Statistics Session / 统计专题" width="720" height="480" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Statistics Session</span><span data-lang="zh">统计专题</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="18" aria-label="Career Development / 职业发展"><img src="/assets/img/conference-highlights-2026/career-thumb.jpg" data-full="/assets/img/conference-highlights-2026/career.jpg" alt="Career Development / 职业发展" width="720" height="540" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Career Development</span><span data-lang="zh">职业发展</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="19" aria-label="Sponsor Exhibits and Networking / 赞助商展台与交流"><img src="/assets/img/conference-highlights-2026/exhibits-thumb.jpg" data-full="/assets/img/conference-highlights-2026/exhibits.jpg" alt="Sponsor Exhibits and Networking / 赞助商展台与交流" width="720" height="396" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Sponsor Exhibits and Networking</span><span data-lang="zh">赞助商展台与交流</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="20" aria-label="Networking Dinner / 交流晚宴"><img src="/assets/img/conference-highlights-2026/dinner-thumb.jpg" data-full="/assets/img/conference-highlights-2026/dinner.jpg" alt="Networking Dinner / 交流晚宴" width="720" height="493" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Networking Dinner</span><span data-lang="zh">交流晚宴</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="21" aria-label="Evening Performance Highlights I / 晚间演出精彩集锦（一）"><img src="/assets/img/conference-highlights-2026/performance-collection-1-thumb.jpg" data-full="/assets/img/conference-highlights-2026/performance-collection-1.jpg" alt="Evening Performance Highlights I / 晚间演出精彩集锦（一）" width="720" height="450" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Evening Performance Highlights I</span><span data-lang="zh">晚间演出精彩集锦（一）</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="22" aria-label="Evening Performance Highlights II / 晚间演出精彩集锦（二）"><img src="/assets/img/conference-highlights-2026/performance-collection-2-thumb.jpg" data-full="/assets/img/conference-highlights-2026/performance-collection-2.jpg" alt="Evening Performance Highlights II / 晚间演出精彩集锦（二）" width="720" height="450" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Evening Performance Highlights II</span><span data-lang="zh">晚间演出精彩集锦（二）</span></figcaption>
+      </figure>
+      <figure>
+        <button type="button" data-index="23" aria-label="Organizing Team and Performers / 组织团队与表演嘉宾"><img src="/assets/img/conference-highlights-2026/team-thumb.jpg" data-full="/assets/img/conference-highlights-2026/team.jpg" alt="Organizing Team and Performers / 组织团队与表演嘉宾" width="720" height="299" loading="lazy" decoding="async"></button>
+        <figcaption><span data-lang="en">Organizing Team and Performers</span><span data-lang="zh">组织团队与表演嘉宾</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section class="section section--tint" id="program">
   <div class="wrap">
     <h2 data-lang="en">Conference Program</h2>
@@ -357,21 +467,6 @@
   </div>
 </footer>
 <script src="/assets/js/main.js"></script>
-<script>
-(function () {
-  function updateRegistration() {
-    if (Date.now() < Date.parse('2026-10-16T00:00:00-04:00')) return;
-    var fact = document.querySelector('.facts .fact:last-child dd');
-    fact.innerHTML = '<span data-lang="en">Closed</span><span data-lang="zh">已截止</span>';
-    document.querySelector('.register').hidden = true;
-    document.querySelectorAll('.prose > p').forEach(function (p) {
-      if (p.textContent.indexOf('Registration is open.') === 0 || p.textContent.indexOf('报名现已开放。') === 0) p.hidden = true;
-    });
-  }
-  updateRegistration();
-  setInterval(updateRegistration, 60000);
-})();
-</script>
 <dialog class="program-book" data-program-book aria-label="Conference program book / 会议手册">
   <div class="program-book__bar">
     <button type="button" data-book-prev><span data-lang="en">← Previous</span><span data-lang="zh">← 上一组</span></button>
